@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title>Insurance Fraud Claim Detection</title>
+    <style>
+        /* Your existing styles here */
+
+        .marquee-container {
+            padding: 10px;
+            color: #116ebb;
+            background-color: white;
+            font-weight: bold;
+            overflow: hidden;
+            cursor: pointer; /* Add cursor pointer to indicate it's clickable */
+        }
+
+        .marquee-text {
+            white-space: nowrap;
+            animation: marquee 15s linear infinite;
+        }
+
+        @keyframes marquee {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+
+        nav {
+            background-color: #333;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        nav a {
+            display: inline-block;
+            color: white;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-weight: 900;
+        }
+
+        nav a:hover {
+            background-color: white;
+            color: black;
+            border: solid black 2px;
+            border-radius: 25px;
+        }
+
+        .info-section {
+            padding: 20px;
+            margin: 20px;
+            background-color: #f8f8f8;
+            border-radius: 10px;
+        }
+
+        .info-section h2 {
+            color: #333;
+        }
+
+        .info-section p {
+            line-height: 1.6;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #333;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="{% url 'homepage' %}" >Home</a>
+        <a href="{% url 'custoLogin' %}">Customer Login</a>
+        <a href="{% url 'garageLogin' %}">Garage Login</a>
+        <a href="{% url 'aboutUs' %}">About Us</a>
+        <a href="{% url 'faqs' %}">FAQ's</a>
+    </nav>
+
+    <div class="marquee-container" onmouseover="stopMarquee()" onmouseout="startMarquee()">
+        <marquee class="marquee-text">!! All About Car Insurance Frauds In India !!</marquee>
+    </div>
+
+    <script>
+        var isMarqueePaused = false;
+
+        function stopMarquee() {
+            isMarqueePaused = true;
+        }
+
+        function startMarquee() {
+            if (isMarqueePaused) {
+                isMarqueePaused = false;
+            }
+        }
+
+        function redirectToNextPage() {
+            window.location.href = 'https://www.insurancedekho.com/car-insurance/news/all-about-car-insurance-frauds-in-india.htm';
+        }
+    </script>
+</body>
+</html>
